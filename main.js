@@ -1,18 +1,32 @@
-const songs = ['royalty', 'on&on', 'cradels', 'fearless', 'mortals', 'army', 'oblivion', 'redemption', 'skyHigh', 'control']
-
+const songs = document.querySelectorAll('audio')
 const playButtons = document.querySelectorAll('button')
-playButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        console.log('clicked')
-        stopSongs()
-        const song = document.getElementById(btn.id.slice(0, -3))
-        song.play()
-    })
-})
+// const pauseButtons = document.querySelectorAll('pauseBtn')
+const log = console.log
 
 function stopSongs() {
     songs.forEach(song => {
-        const playingSong = document.getElementById(song)
-        playingSong.pause()
+        song.pause()
     })
 }
+
+playButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        stopSongs()
+        const song = document.getElementById(btn.id.slice(0, -3))
+        log(btn.classList.contains('fa-play'))
+        song.play()
+        e.target.classList.toggle('fa-play')
+        e.target.classList.toggle('fa-pause')
+
+    })
+})
+
+
+// pauseButtons.forEach(btn => {
+//     btn.addEventListener('click', (e) => {
+//         console.log('clicked')
+
+//         stopSongs()
+//     })
+// })
+
