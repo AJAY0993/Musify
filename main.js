@@ -3,10 +3,8 @@ const playButtons = document.querySelectorAll('button i')
 const duration = document.querySelectorAll('.audio-length')
 const log = console.log
 
-duration.forEach((song) => {
-    let i = 0
-    const songDuration = songs[i++].duration
-    log(songDuration)
+duration.forEach((songDuration, i) => {
+    songDuration.innerText = songs[i].duration
 })
 
 function stopSongs() {
