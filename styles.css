@@ -121,6 +121,13 @@ footer {
 .toolbar {}
 
 footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer {
     position: relative;
     flex-direction: column;
     height: 70px;
@@ -137,7 +144,7 @@ footer {
     width: 100%;
 }
 
-footer img {
+.footer img {
     position: absolute;
     display: none;
     top: 50%;
@@ -156,4 +163,10 @@ footer img {
     display: inline-block;
     margin: 0 1em;
     cursor: pointer;
+}
+
+@media (max-width:600px) {
+    .audio-length {
+        display: none;
+    }
 }
