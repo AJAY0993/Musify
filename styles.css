@@ -13,6 +13,12 @@
 
 body {
     color: var(--color-text);
+    background: var(--color-main);
+}
+
+.container {
+    width: 80%;
+    max-width: 1600px;
 }
 
 nav {
@@ -112,7 +118,42 @@ footer {
     right: 0;
 }
 
-.toolbar {
-    height: 80px;
+.toolbar {}
+
+footer {
+    position: relative;
+    flex-direction: column;
+    height: 70px;
     background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+footer img {
+    position: absolute;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    height: 50px;
+    width: 70px;
+    overflow: hidden;
+}
+
+.toolbar button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    display: inline-block;
+    margin: 0 1em;
+    cursor: pointer;
 }

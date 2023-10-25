@@ -156,24 +156,34 @@
                 </li>
 
             </ul>
-            <audio src="songs/royalty.mp3" id="royalty"></audio>
-            <audio src="songs/on&on.mp3" id="on&on"></audio>
-            <audio src="songs/army.mp3" id="army"></audio>
-            <audio src="songs/control.mp3" id="control"></audio>
-            <audio src="songs/cradels.mp3" id="cradels"></audio>
-            <audio src="songs/fearless.mp3" id="fearless"></audio>
-            <audio src="songs/mortals.mp3" id="mortals"></audio>
-            <audio src="songs/oblivion.mp3" id="oblivion"></audio>
-            <audio src="songs/skyHigh.mp3" id="skyHigh"></audio>
-            <audio src="songs/redemption.mp3" id="redemption"></audio>
+            <audio src="songs/royalty.mp3" id="royalty" preload="metadata"></audio>
+            <audio src="songs/on&on.mp3" id="on&on" preload="metadata"></audio>
+            <audio src="songs/army.mp3" id="army" preload="metadata"></audio>
+            <audio src="songs/control.mp3" id="control" preload="metadata"></audio>
+            <audio src="songs/cradels.mp3" id="cradels" preload="metadata"></audio>
+            <audio src="songs/fearless.mp3" id="fearless" preload="metadata"></audio>
+            <audio src="songs/mortals.mp3" id="mortals" preload="metadata"></audio>
+            <audio src="songs/oblivion.mp3" id="oblivion" preload="metadata"></audio>
+            <audio src="songs/skyHigh.mp3" id="skyHigh" preload="metadata"></audio>
+            <audio src="songs/redemption.mp3" id="redemption" preload="metadata"></audio>
         </div>
 
 
     </main>
     <footer>
-        <div class="toolbar"></div>
+
+        <img src="music-gif.gif" alt="">
+
+
+        <div class="toolbar">
+            <button id="play-prev"><i class="fa-solid fa-backward"></i></button>
+            <button id="pause-it"><i class="fa-solid fa-play"></i></button>
+            <button id="play-next"><i class="fa-solid fa-forward"></i></button>
+        </div>
+        <progress value="10" max="100" class="progress-bar">
+
     </footer>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
